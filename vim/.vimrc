@@ -55,6 +55,8 @@ endif
 execute pathogen#infect()
 execute pathogen#helptags()
 
+"Map leader
+let mapleader=","
 
 map <C-n> :NERDTreeToggle<CR>
 set nu
@@ -87,3 +89,8 @@ let g:pymode_doc_bind='K'
 let g:pymode_rope=0
 let g:pymode_indent=0
 let g:pymode_options_colorcolumn=0
+
+
+"Tmux stuff
+let g:slime_target = "tmux"
+let g:slime_python_ipython=1

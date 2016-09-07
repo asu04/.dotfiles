@@ -10,9 +10,11 @@ Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
                     , Run Date "%a %b %_d %H:%M" "date" 10
                     , Run StdinReader
                     , Run BatteryP ["BAT0"] ["-t", "<acstatus>", "-L", "10", "-H", "80", "-l", "red", "-h", "green", "--", "-O", "<fc=green>Charging</fc>", "-o", "Battery: <left>%"] 10
+                    , Run CoreTemp ["-t", "TEMP: <core1> <core2> <core3> <core4> ", "-L", "40", "-H", "60", "-l", "blue", "-h", "red"] 50
+                    , Run PipeReader "TEST: /home/asu/test" "test"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% }{ %multicpu% | %memory% * %swap%    <fc=#ee9a00>%date%</fc> | %KMDW% | %battery%  "
+       , template = "%StdinReader% }{%coretemp% | %multicpu% | %memory% * %swap%    <fc=#ee9a00>%date%</fc> | %test% | %battery%  "
        , allDesktops = True
        }
