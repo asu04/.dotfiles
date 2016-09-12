@@ -12,4 +12,21 @@ volumeicon &
 
 xbindkeys &
 
+#detect monitor
+
+HDMI1=`xrandr -q | grep "HDMI1 connected"`
+if [ "$HDMI1" ]; then
+	xrandr --output eDP1 --off
+fi
+
+feh --bg-fill /home/asu/Downloads/662305.jpg &
+
+light-locker --lock-on-suspend &
+
+xautolock -time 20 -locker "systemctl suspend" -detectsleep &
+
+
+
+
+
 
