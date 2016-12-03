@@ -15,4 +15,6 @@ export VISUAL=vim
 alias ll='ls -l'
 alias la='ls -a'
 alias ..='cd ..'
+alias rm="mv -t ~/.trash/ --backup=t --verbose"
+
 

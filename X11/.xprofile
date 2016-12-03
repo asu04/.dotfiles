@@ -21,9 +21,10 @@ fi
 
 feh --bg-fill /home/asu/Downloads/662305.jpg &
 
-light-locker --lock-on-suspend &
+light-locker --lock-after-screensaver=0 --lock-on-suspend &
 
-xautolock -time 20 -locker "systemctl suspend" -detectsleep &
+xautolock -time 10 -locker "systemctl suspend" -detectsleep &
+
 
 
 

@@ -16,9 +16,7 @@ runtime! debian.vim
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
-if has("syntax")
-  syntax on
-endif
+syntax on
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
@@ -32,9 +30,7 @@ set background=dark
 
 " Uncomment the following to have Vim load indentation rules and plugins
 " according to the detected filetype.
-if has("autocmd")
-  filetype plugin indent on
-endif
+filetype plugin indent on
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
@@ -69,7 +65,7 @@ autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
 
 :hi Folded ctermfg=2
-let g:syntastic_python_checkers = ['pyflakes']
+let g:syntastic_python_checkers=["pyflakes"]
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -94,3 +90,6 @@ let g:pymode_options_colorcolumn=0
 "Tmux stuff
 let g:slime_target = "tmux"
 let g:slime_python_ipython=1
+
+"Commenting
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
