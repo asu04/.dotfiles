@@ -19,3 +19,6 @@
 [submodule "vim/.vim/bundle/vim-haskell-indent"]
 	path = vim/.vim/bundle/vim-haskell-indent
 	url = https://github.com/itchyny/vim-haskell-indent.git
+[submodule "vim/.vim/bundle/Nvim-R"]
+	path = vim/.vim/bundle/Nvim-R
+	url = https://github.com/jalvesaq/Nvim-R.git
