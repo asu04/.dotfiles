@@ -5,9 +5,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-PS1='\[\033[1;32m\]\u@\h: \[\033[1;36m\]\w $ \[\033[0m\] '
+eval `dircolors ~/.dircolors`
 
+alias ls='ls --color=auto'
+PS1='\[\e[1;38;5;29m\]\u@\h: \[\e[1;38;5;166m\]\w $ \[\e[0m\] '
 export VISUAL=vim
 
 
@@ -16,5 +17,8 @@ alias ll='ls -l'
 alias la='ls -a'
 alias ..='cd ..'
 alias rm="mv -t ~/.trash/ --backup=t --verbose"
+alias octave="octave --no-gui"
+alias python="python2"
+alias ipython="ipython2"
 
 

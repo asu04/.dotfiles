@@ -17,10 +17,12 @@ runtime! debian.vim
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
 syntax on
+syntax enable
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
 set background=dark
+set t_Co=16
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
@@ -51,10 +53,15 @@ endif
 execute pathogen#infect()
 execute pathogen#helptags()
 
+colorscheme solarized
+
 "Map leader
 let mapleader=","
 
+
+
 map <C-n> :NERDTreeToggle<CR>
+nmap <c-c><c-c> <Plug>SlimeLineSend
 set nu
 set foldmethod=indent
 set foldlevel=99
@@ -93,3 +100,6 @@ let g:slime_python_ipython=1
 
 "Commenting
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+
+"Omnifunc
+"set omnifunc=syntaxcomplete#Complete
