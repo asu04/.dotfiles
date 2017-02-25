@@ -22,9 +22,6 @@
 [submodule "vim/.vim/bundle/vim-colors-solarized"]
 	path = vim/.vim/bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "vim/.vim/bundle/haskell-vim"]
-	path = vim/.vim/bundle/haskell-vim
-	url = https://github.com/neovimhaskell/haskell-vim.git
 [submodule "vim/.vim/bundle/vim-hindent"]
 	path = vim/.vim/bundle/vim-hindent
 	url = https://github.com/alx741/vim-hindent.git
