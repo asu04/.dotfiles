@@ -21,4 +21,3 @@ alias octave="octave --no-gui"
 alias python="python2"
 alias ipython="ipython2"
 
-

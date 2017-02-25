@@ -58,8 +58,9 @@ main = do
                                          )
 		, terminal = "gnome-terminal"
 		, focusFollowsMouse = False
-		} `additionalKeys` myKeys
-    xmonad config
+		}
+    xmonad (config `additionalKeys` myKeys)
+
 		
 
 myKeys = [ ((mod1Mask .|. shiftMask, xK_l), spawn "light-locker-command -l")
@@ -68,6 +69,8 @@ myKeys = [ ((mod1Mask .|. shiftMask, xK_l), spawn "light-locker-command -l")
 	 , ((mod1Mask, xK_c), spawn "chromium")
          , ((mod1Mask, xK_r), moveTo Next NonEmptyWS)
          , ((mod1Mask, xK_n), swapNextScreen)
+         , ((mod1Mask .|. shiftMask, xK_h), spawn "hdmi-monitor.sh") 
+         , ((mod1Mask .|. shiftMask, xK_a), spawn "hdmi-sound.sh")
          ]
          ++
          [((m .|. mod1Mask, k), windows $ f i)

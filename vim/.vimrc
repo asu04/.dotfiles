@@ -63,6 +63,7 @@ let mapleader=","
 map <C-n> :NERDTreeToggle<CR>
 nmap <c-c><c-c> <Plug>SlimeLineSend
 set nu
+set wrap
 set foldmethod=indent
 set foldlevel=99
 nnoremap <space> za
@@ -90,7 +91,7 @@ let g:pymode_lint_on_write=0
 let g:pymode_doc=1
 let g:pymode_doc_bind='K'
 let g:pymode_rope=0
-let g:pymode_indent=0
+let g:pymode_indent=1
 let g:pymode_options_colorcolumn=0
 
 
