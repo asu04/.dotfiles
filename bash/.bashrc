@@ -10,15 +10,13 @@ eval `dircolors ~/.dircolors`
 alias ls='ls --color=auto'
 #PS1='\[\e[1;38;5;29m\]\u@\h: \[\e[1;38;5;166m\]\w $ \[\e[0m\] '
 export VISUAL=vim
-export LC_ALL=en_US.utf-8
-export LANG="$LC_ALL"
 
 
 # Some additional aliases
 alias ll='ls -l'
 alias la='ls -a'
 alias ..='cd ..'
-alias rm="mv -t ~/.trash/ --backup=t --verbose"
+#alias rm="mv -t ~/.trash/ --backup=t --verbose"
 alias octave="octave --no-gui"
 alias python="python2"
 alias ipython="ipython2"
