@@ -14,6 +14,7 @@ runtime! debian.vim
 " options, so any other options should be set AFTER setting 'compatible'.
 "set compatible
 
+
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
 " line enables syntax highlighting by default.
 syntax on
@@ -23,6 +24,9 @@ syntax enable
 " turn on this option as well
 set background=dark
 set t_Co=16
+
+"Set encoding 
+set encoding=utf-8
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
@@ -53,12 +57,11 @@ endif
 execute pathogen#infect()
 execute pathogen#helptags()
 
-colorscheme solarized
 
 "Map leader
 let mapleader=","
 
-
+colorscheme solarized
 
 map <C-n> :NERDTreeToggle<CR>
 nmap <c-c><c-c> <Plug>SlimeLineSend
@@ -103,4 +106,4 @@ let g:slime_python_ipython=1
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
 "Omnifunc
-"set omnifunc=syntaxcomplete#Complete
+set omnifunc=syntaxcomplete#Complete

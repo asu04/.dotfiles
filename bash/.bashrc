@@ -8,8 +8,10 @@
 eval `dircolors ~/.dircolors`
 
 alias ls='ls --color=auto'
-PS1='\[\e[1;38;5;29m\]\u@\h: \[\e[1;38;5;166m\]\w $ \[\e[0m\] '
+#PS1='\[\e[1;38;5;29m\]\u@\h: \[\e[1;38;5;166m\]\w $ \[\e[0m\] '
 export VISUAL=vim
+export LC_ALL=en_US.utf-8
+export LANG="$LC_ALL"
 
 
 # Some additional aliases
