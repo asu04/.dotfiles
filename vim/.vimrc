@@ -24,6 +24,7 @@ syntax enable
 " turn on this option as well
 set background=dark
 set t_Co=16
+set backspace=indent,eol,start
 
 "Set encoding 
 set encoding=utf-8
@@ -64,7 +65,7 @@ let mapleader=","
 colorscheme solarized
 
 map <C-n> :NERDTreeToggle<CR>
-nmap <c-c><c-c> <Plug>SlimeLineSend
+nmap <C-x> :SlimeSend
 set nu
 set wrap
 set foldmethod=indent
@@ -107,3 +108,9 @@ autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
 "Omnifunc
 set omnifunc=syntaxcomplete#Complete
+
+"R stuff
+let R_in_buffer=0
+let R_applescript=0
+let R_tmux_split=1
+let R_assign=2
