@@ -28,12 +28,17 @@ set backspace=indent,eol,start
 
 "Set encoding 
 set encoding=utf-8
+set shiftwidth=4
+set softtabstop=4
+
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
 "if has("autocmd")
 "  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 "endif
+
+set expandtab
 
 " Uncomment the following to have Vim load indentation rules and plugins
 " according to the detected filetype.
@@ -62,7 +67,7 @@ execute pathogen#helptags()
 "Map leader
 let mapleader=","
 
-colorscheme solarized
+colorscheme solarized 
 
 map <C-n> :NERDTreeToggle<CR>
 nmap <C-x> :SlimeSend
@@ -114,3 +119,6 @@ let R_in_buffer=0
 let R_applescript=0
 let R_tmux_split=1
 let R_assign=2
+
+
+au BufRead,BufNewFile,BufReadPost *.json colorscheme slate 

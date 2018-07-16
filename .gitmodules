@@ -25,3 +25,6 @@
 [submodule "vim/.vim/bundle/vim-hindent"]
 	path = vim/.vim/bundle/vim-hindent
 	url = https://github.com/alx741/vim-hindent.git
+[submodule "vim/.vim/bundle/vim-json"]
+	path = vim/.vim/bundle/vim-json
+	url = https://github.com/elzr/vim-json.git
