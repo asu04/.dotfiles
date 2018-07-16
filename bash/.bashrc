@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-eval `dircolors ~/.dircolors`
+eval `dircolors ~/.dotfiles/bash/dircolors-solarized/dircolors.256dark`
 
 alias ls='ls --color=auto'
 #PS1='\[\e[1;38;5;29m\]\u@\h: \[\e[1;38;5;166m\]\w $ \[\e[0m\] '
@@ -20,5 +20,6 @@ alias ..='cd ..'
 alias octave="octave --no-gui"
 alias python="python2"
 alias ipython="ipython2"
+
 
 
